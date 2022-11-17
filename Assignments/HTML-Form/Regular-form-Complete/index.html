@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "styles.css" rel = "stylesheet"> 
+    <title>Regular form</title>
+</head>
+<body>
+    <form method = "get" action = "/action-page.php" target = "_blank">
+        <fieldset>
+            <legend>Hi form</legend>
+            <table>
+                <tr>
+                    <td><label for = "name">Нэр</label></td>
+                    <td><input type = "text" id = "name" name = "name" value = ""></td>
+                </tr>
+                <tr>
+                    <td><label for = "lastname">Овог</label></td>
+                    <td><input type = "text" id = "lastname" name = "lastname" value = ""></td>
+                </tr>
+                <tr>
+                    <td><label for = "email">И-Мэйл</label></td>
+                    <td><input type = "text" id = "email" name = "email" value = ""></td>
+                </tr>
+                <tr>
+                    <td><label for = "phone">Утас</label></td>
+                    <td><input type = "text" id = "phone" name = "phone" value = ""></td>
+                </tr>
+                <tr>
+                    <td><label for = "age">Нас</label></td>
+                    <td><input type = "text" id = "age" name = "age" value = ""></td>
+                </tr>
+                <tr>
+                        <td><label for = "birthday">Төрсөн өдөр</label></td>
+                        <td><input type = "date" id = "birthday" name = "birthday" value = ""></td>
+                </tr>
+                <tr>
+                    <td><label>Хүйс</label></td>
+                    <td>
+                        <select name = "gender" id = "gender" value = "gender">
+                            <option value = "none">Сонгох</option>
+                            <option value = "male">Эрэгтэй</option>
+                            <option value = "female">Эмэгтэй</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class = "special"><label for = "comment">Тодорхойлолт</label></td>
+                    <td><textarea rows = "4" cols = "20" maxlength = "51" id = "comment" name = "comment"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>Сурагч эсэх</label></td>
+                    <td><input class = "tiim" type = "checkbox" name = "checkbox">Тийм</td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+*
+{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table
+{
+    margin: 0 auto;
+    border: 1px solid grey;
+    width: 30%;
+    border-spacing: 5px 10px;
+    border-radius: 10px;
+}
+
+label
+{
+    display: block;
+    text-align: right;
+}
+
+input
+{
+    display: block;
+    text-align: left;
+}
+
+.special
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+textarea
+{
+    width: 143px;
+}
+
+
+

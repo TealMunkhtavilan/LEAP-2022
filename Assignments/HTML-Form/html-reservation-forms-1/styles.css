@@ -1,0 +1,25 @@
+*
+{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form
+{
+    width: 20%;
+    margin: 0 auto;
+}
+input
+{
+    display: block;
+}
+
+label
+{
+    display: block;
+}
+
+.special
+{
+    display: inline;
+}

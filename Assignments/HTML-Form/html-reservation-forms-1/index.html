@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML reservation forms 1</title>
+    <link href = "styles.css" rel = "stylesheet">
+</head>
+<body>
+    <form>
+        <h1>Travel reservation form</h1>
+        <h2>*denotes mandotory</h2>
+            <label for = "fullname">Full name*:</label>
+            <input type = "text" name = "fullname" value = "" id = "fullname" placeholder = "FirstName LastName">
+
+            <label for = "email">Email address*:
+                <input type = "text" name = "email" value = "" id = "email" placeholder = "EMAIL_ADDRESS">
+            </label>
+
+            <label>Select Tour Package*:</label>
+            <select>
+                <option value = "">Select</option>
+                <option value = "regular">Regular</option>
+                <option value = "plus">Plus</option>
+                <option value = "luxury">Luxury</option>
+            </select>
+
+            <label>Arrival date*:</label>
+            <input type = "date" placeholder = "m/d/y">
+
+            <label>Number of persons*:</label>
+            <input type = "text" placeholder = "UNKNOWN_TYPE">
+
+            <label>What would you want to avail*</label>
+
+            <div><label class = "special">Boarding <input class = "special" type = "checkbox"></label></div>
+            <div><label class = "special">Fooding <input class = "special" type = "checkbox"></label></div>
+            <div><label class = "special">Sight seeing <input class = "special" type = "checkbox"></label></div>
+
+            <label>Discount Coupon code:</label>
+            <input type = "text" placeholder = "UNKNOWN_TYPE">
+
+            <label>Terms and conditions*</label>
+
+            <div>
+            <label class = "special" for = "agree">
+                <input class = "special" type = "radio" id = "agree" name = "choice">I agree
+            </label>
+            <label class = "special" for = "disagree">
+                <input class = "special" type = "radio" id = "disagree" name = "choice">I disagree
+            </label>
+            </div>
+            <button type = "submit">Complete reservation</button>
+    </form>
+</body>
+</html>

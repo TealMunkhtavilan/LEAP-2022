@@ -1,0 +1,41 @@
+*
+{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+fieldset
+{
+    margin: 0 auto;
+    width: 50%;
+}
+
+table
+{
+    margin: 0 100px;
+    border-spacing: 5px 10px;
+}
+
+label
+{
+    display: block;
+    text-align: right;
+}
+
+input
+{
+    display: block;
+}
+
+.special
+{
+    vertical-align: bottom;
+}
+
+.tiim
+{
+    display:inline;
+}
+
+
+
