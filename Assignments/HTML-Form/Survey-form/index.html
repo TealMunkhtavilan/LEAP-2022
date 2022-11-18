@@ -10,51 +10,89 @@
 <body>
     <div class = "container">
         <header>
-            <h1>Social media hereglegchdiin sudalgaa</h1>
-            <p>Sudalgaand oroltsson tand bayarlalaa.</p>
+            <h1>Social media хэрэглэгчдийн судалгаа</h1>
+            <p>Судалгаанд оролцсон танд баярлалаа</p>
         </header>
         <div class = "main">
             <form>
                 <fieldset>
-                    <legend>Yoronhii medeelel</legend>
+                    <legend>Ерөнхий мэдээлэл</legend>
                     <div class = "items">
-                        <label>Ner</label>
+                        <label>Нэр</label>
                         <input type = "text">
                     </div>
                     <div class = "items">
-                        <label>E-mail</label>
+                        <label>И-мэйл</label>
                         <input type = "text">
                     </div>
                     <div class = "itemsEnd">
-                        <label>Nas</label>
+                        <label>Нас</label>
                         <input type = "text">
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend>Social media</legend>
                     <div class = "items">
-                        <label>Ta udurt heden tsag social media ashigladag ve?</label>
+                        <label>Та өдөрт хэдэн цаг social media ашигладаг вэ?</label>
                         <select>
-                            <option value = "1 - 2tsag">1 - 2tsag</option>
+                            <option value = "1 - 2цаг">1 - 2цаг</option>
+                            <option value = "2 - 3цаг">2 - 3цаг</option>
+                            <option value = "3 -аас дээш">3-аас дээш</option>
                         </select>
                     </div>
                     <div class = "items">
-                        <label>Ta onlineaar hudaldan avalt hiih, delguur orj hudaldan avalt
-                            hiihiin aliniig ni iluud uzdeg ve
+                        <label>Та онлайнаар худалдан авалт хийх, дэлгүүр орж худалдан авалт
+                            хийхийн алийг нь илүүд үздэг вэ
                         </label>
                         <div class = "radios">
-                            <input type = "radio">
-                            <label>Online hudaldan avalt</label>
+                            <input type = "radio" name = "choice">
+                            <label>Онлайн худалдан авалт</label>
                         </div>
                         <div class = "radios">
-                            <input type = "radio">
-                            <label>Delguur orj hudaldan avalt hiih</label>
+                            <input type = "radio" name = "choice">
+                            <label>Дэлгүүр орж худалдан авалт хийх</label>
                         </div>
                     </div>
                     <div class = "itemsEnd">
-
+                        <label>Та ямар social media ашигладаг вэ?</label>
+                    
+                    <div class = "radios">
+                        <input type = "checkbox">
+                        <label>Facebook</label>
+                    </div>
+                    <div class = "radios">
+                        <input type = "checkbox">
+                        <label>Instagram</label>
+                    </div>
+                    <div class = "radios">
+                        <input type = "checkbox">
+                        <label>Twitter</label>
+                    </div>
+                    <div class = "radios">
+                        <input type = "checkbox">
+                        <label>Reddit</label>
+                    </div>
+                    <div class = "radios">
+                        <input type = "checkbox">
+                        <label>Snapchat</label>
+                    </div>
+                    <div class = "radios">
+                        <input type = "checkbox">
+                        <label>Quora</label>
+                    </div>
+                    <div class = "radios">
+                        <input type = "checkbox">
+                        <label>Youtube</label>
+                    </div>
+                    <div class = "radios">
+                        <input type = "checkbox">
+                        <label>Бусад</label>
+                    </div>
                     </div>
                 </fieldset>
+                <labeL>Санал хүсэлт</labeL>
+                <textarea rows = "5" maxlength = "300" placeholder = "Санал хүсэлтээ энд бичнэ үү..."></textarea>
+                <button type = "submit">Илгээх</button>
             </form>
         </div>
     </div>  
