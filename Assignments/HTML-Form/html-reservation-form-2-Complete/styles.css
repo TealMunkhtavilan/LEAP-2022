@@ -1,0 +1,61 @@
+*
+{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+fieldset
+{
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.header
+{
+    background: rgb(196, 53, 89);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    color: white;
+}
+
+form fieldset
+{
+    border-color : gray;
+}
+
+div
+{
+    padding: 8px;
+}
+
+.container
+{
+    text-align: center;
+    border: none;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.border
+{
+    margin-top: 5px;
+    border: 2px dashed rgb(117, 20, 12);
+    background: rgb(240, 244, 250);
+}
+
+button
+{
+    padding: 2px;
+}
+
+label
+{
+    padding-right: 5px;
+}
+
+
+
+
