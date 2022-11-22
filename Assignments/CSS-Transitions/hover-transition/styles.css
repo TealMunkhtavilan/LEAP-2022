@@ -1,0 +1,55 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p
+{
+    padding-left: 20px;
+}
+
+.item1
+{
+    margin-top: 50px;
+}
+
+.item2
+{
+    margin-top: 80px;
+}
+
+/* block1 styles */
+.block1
+{
+    background: blue;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+.block1
+{
+    transition-duration: 2s;
+}
+.block1:active
+{
+    width: 100%;
+}
+
+/* block2 styles */
+.block2
+{
+    background: green;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+.block2
+{
+    transition-duration: 2s;
+}
+.block2:hover
+{
+    width: 100%;
+}
