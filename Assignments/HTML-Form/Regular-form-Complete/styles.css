@@ -7,7 +7,7 @@
 fieldset
 {
     margin: 0 auto;
-    width: 50%;
+    width: 30rem; /*static bailgah uudnees zugeer ingej ugsun bolno.*/
 }
 
 table
