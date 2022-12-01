@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max-Min</title>
+</head>
+<body>
+    
+    <script>
+        let a = prompt("a: ", ""), b = prompt("b: ", ""), c = prompt("c: ", "");
+        parseInt(a);
+        parseInt(b);
+        parseInt(c);
+        let max, min; // 2 3 4 , 2 4 3, 4 3 2, 4 2 3, 4 4 4 , 4 2 2, 4 2 4, 4 4 2
+        if(a >= b && a >= c)
+        {
+            max = a;
+            if(b >= c)
+            {
+                min = c;
+                console.log("Max: " + max);
+                console.log("Min: "+ min);
+            }
+            else
+            {
+                min = b;
+                console.log("Max: " + max);
+                console.log("Min: "+ min);
+            }
+        }else if (b >= c && b >= a)
+        {
+            max = b;
+            if(a >= c)
+            {
+                min = c;
+                console.log("Max: " + max);
+                console.log("Min: " + min);
+            }
+            else
+            {
+                min = a;
+                console.log("Max: " + max);
+                console.log("Min: " + min);
+            }
+        }else if (c >= b && c >= a)
+        {
+            max = c;
+            if(b >= a)
+            {
+                min = a;
+                console.log("Max: " + max);
+                console.log("Min: " + min);
+            }
+            else
+            {
+                min = b;
+                console.log("Max: " + max);
+                console.log("Min: " + min);
+            }
+        }
+    </script>
+</body>
+</html>
