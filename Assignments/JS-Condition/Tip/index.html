@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip</title>
+</head>
+<body>
+    
+    <script>
+        //Gonchig zoogiin gazar orov (ternary operator ashiglana)
+        //5000MNT - 30000MNT 15% busad ued 20%
+        let cash = 100000;
+        let tip = cash >= 5000 && cash <= 30000 ? cash + (cash * 15) / 100 : cash + (cash * 20) / 100;
+        console.log("Tip: " + tip);
+    </script>
+</body>
+</html>

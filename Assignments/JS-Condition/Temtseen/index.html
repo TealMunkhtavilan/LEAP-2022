@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temtseen</title>
+</head>
+<body>
+    
+    <script>
+        let team_A = (100 + 108 + 121) / 3; //Utguudiig ni oorchilj shalgana uu.
+        let team_B = (100 + 108 + 120) / 3;
+        if(team_B < 100 && team_A < 100)
+        {
+            console.log("Yalagch baihgui.");
+        }else if(team_B >= 100 && team_B > team_A)
+        {
+            console.log("B team winner!");
+        }else if(team_A >= 100 && team_B < team_A)
+        {
+            console.log("A team winner!");
+        }else if (team_A == team_B && team_A >= 100)
+        {
+            console.log("Draw");
+        }
+    </script>
+</body>
+</html>
