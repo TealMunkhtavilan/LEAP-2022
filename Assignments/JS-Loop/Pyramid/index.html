@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid</title>
+</head>
+<body>
+    <script>
+        // Zandalshuulsan shariluud aguulsan pyramid hiih
+        // Ehleh utguud
+        let row = 10;
+        let countRows = 0;
+        let spaceEachRow = 9;
+        let countSpace = 0;
+        let countStars = 0;
+        let numberOfStarsEachRow = 1;
+        let star = "*";
+        let space = " ";
+        while(countRows < row)
+        {
+            // Tuhain murund zainuud avna
+            while(countSpace < spaceEachRow)
+            {
+                space += " ";
+                countSpace++;
+            }
+            // Tuhain murund odnuudiig avna
+            countStars = 1;
+            while(countStars < numberOfStarsEachRow)
+            {
+                star += "*";
+                countStars++;
+            }
+            numberOfStarsEachRow = numberOfStarsEachRow + 2;
+            spaceEachRow--;
+            console.log(space + star); //Zai bolon odnuudiig hevlene
+            countSpace = 0;
+            star = "*";
+            space = " ";
+            countRows = countRows + 1; //Muriig nemegduulne
+        }
+    </script>
+</body>
+</html>

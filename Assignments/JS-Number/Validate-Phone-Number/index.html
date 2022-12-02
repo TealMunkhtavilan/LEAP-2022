@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Phone Number</title>
+</head>
+<body>
+    
+    <script>
+        let input = prompt("Utasnii dugaaraa oruulna uu: ", "");
+        let rawNumbers = input.substr(1, 11);
+        let isNumber = Number(rawNumbers);// 97690410922
+        if(Number.isInteger(isNumber))
+        {
+            if(input.substr(0, 4) == "+976")
+            {
+                if(input.length == 12)
+                {
+                    console.log("Ta mongol ulsiin utasnii dugaariig zov oruullaa.");
+                }
+                else
+                {
+                    console.log("Ta mongol ulsiin utasnii dugaariig buruu oruullaa.");
+                }
+            }
+            else
+            {
+                console.log("Mongol bish baina!!!");
+            }
+        }
+        else
+        {
+            console.log("Useg yavaad baina!!!");
+        }
+    </script>
+</body>
+</html>

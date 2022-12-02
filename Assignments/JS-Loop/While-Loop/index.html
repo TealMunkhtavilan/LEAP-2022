@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+<body>
+    
+    <script>
+        // //Bodlogo 1
+        // let i = 1;
+        // while (i <= 10)
+        // {
+        //     console.log(i);
+        //     i = i + 1;
+        // }
+
+        // //Bodlogo 2
+        // let i = 1;
+        // while (i <= 10)
+        // {
+        //     if(i % 2 != 0)
+        //     {
+        //         console.log(i);
+        //         i = i + 1;
+        //     }
+        //     i = i + 1;
+        // }
+
+        // //Bodlogo 3
+        // let i = 1;
+        // while(i <= 10)
+        // {
+        //     if(i % 2 == 0)
+        //     {
+        //         console.log(i);
+        //         i = i + 1;
+        //     }
+        //     i = i + 1;
+        // }
+
+        // //Bodlogo 4
+        // let i = 1;
+        // let niilber = 0;
+        // while (i <= 100)
+        // {
+        //     niilber = niilber + i;
+        //     i = i + 1;
+        // }
+        // console.log("Niilber: " + niilber);
+
+        // //Bodlogo 5
+        // let N = parseInt(prompt("N toog oruulna uu: ", ""));
+        // let i = 1;
+        // let niilber = 0;
+        // while (i <= N)
+        // {
+        //     niilber = niilber + i;
+        //     i = i + 1;
+        // }
+        // console.log("N hurtelh toonuudiin niilber: " + niilber);
+
+        // //Bodlogo 6
+        // let too = parseInt(prompt("Too: ", ""));
+        // let i = 2;
+        // let huvaagchid = 2;
+        // while(i < too)
+        // {
+        //     if(too % i != 0)
+        //     {
+        //         i = i + 1;
+        //     }
+        //     else
+        //     {
+        //         huvaagchid++;
+        //         break;
+        //     }
+        // }
+        // if(huvaagchid == 2)
+        // {
+        //     console.log("Anhnii too mun");
+        // }
+        // else
+        // {
+        //     console.log("Anhnii too bish");
+        // }
+
+        // //Bodlogo 7
+        // let min = 1, max = 100, i = 2, huvaagchid = 2;
+        //     while(min <= max)
+        //     {
+        //         huvaagchid = 2;
+        //         i = 2;
+        //         while(i < min)
+        //         {
+        //             if(min % i != 0)
+        //             {
+        //                 i = i + 1;
+        //             }
+        //             else
+        //             {
+        //                 huvaagchid++;
+        //                 break;
+        //             }
+        //         }
+        //         if(huvaagchid == 2)
+        //         {
+        //             console.log(min);
+        //         }
+        //         min = min + 1;
+        //     }
+
+        // //Bodlogo 8
+        // let i = 1;
+        // let N = parseInt(prompt("N toog oruulna uu: ", ""));
+        // let factorial = 1;
+        // while (i <= N)
+        // {
+        //     factorial = factorial * i;
+        //     i = i + 1;
+        // }
+        // console.log("N toonii factorial: " + factorial);
+
+        // //Bodlogo 9
+        // let too = 123;
+        // let niilber = 0;
+        // let tsifr;
+        // while (too > 0)
+        // {
+        //     tsifr = too % 10;
+        //     niilber = niilber + tsifr;
+        //     too = Math.floor(too / 10);
+        // }
+        // console.log("Tsifruudiin niilber: " + niilber);
+
+        // //Bodlogo 10
+        // let N = Number(prompt("N toog oruulna uu: ", ""));
+        // let niilber = 0, i = 1;
+        // while (i <= N)
+        // {
+        //     if(i % 2 != 0)
+        //     {
+        //         console.log(i);
+        //         niilber = niilber + i;
+        //         i++;
+        //     }
+        //     i++;
+        // }
+        // console.log("Sondgoi toonuudiin niilber: " + niilber);
+
+        // //Bodlogo 11
+        // let N = Number(prompt("N toog oruulna uu: ", ""));
+        // let niilber = 0, i = 1;
+        // while (i <= N)
+        // {
+        //     if(i % 2 == 0)
+        //     {
+        //         console.log(i);
+        //         niilber = niilber + i;
+        //         i++;
+        //     }
+        //     i++;
+        // }
+        // console.log("Sondgoi toonuudiin niilber: " + niilber);
+
+        // //Bodlogo 12
+        // let too = prompt("Too: ", ""); //123 <==> 321
+        // let N = too.length - 1;
+        // let urvuuToo = "";
+        // while (N > -1)
+        // {
+        //     urvuuToo = urvuuToo + too[N];
+        //     N--;
+        // }
+        // console.log("Urvuu: " + urvuuToo);
+
+        //Bodlogo 13
+        let too = prompt("Toogoo oruulna uu: ", ""); //123
+        let i = 0;
+        while(i < too.length)
+        {
+            switch(too[i])
+            {
+                case '1': console.log("Neg");
+                break;
+                case "2": console.log("Hoyor");
+                break;
+                case "3": console.log("Gurav");
+                break;
+                case "4": console.log("Duruv");
+                break;
+                case "5": console.log("Tav");
+                break;
+                case "6": console.log("Zurgaa");
+                break;
+                case "7": console.log("Doloo");
+                break;
+                case "8": console.log("Naim");
+                break;
+                case "9": console.log("Yos");
+                break;
+                case "0": console.log("Teg");
+                break;s
+                default: console.log("Invalid");
+                break;
+            }
+            i = i + 1;
+        }
+        console.log(too.length);
+    </script>
+</body>
+</html>
