@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Array - 1</title>
+</head>
+<body>
+    
+    <script>
+        let itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+        //console.log ashiglan hevleh
+
+        console.log("console.log ashiglan hevleh");
+        console.log(itCompanies);
+
+        //Array deh companiudiin length -iig hevleh;
+        console.log("\nIT companiudiin length -iig hevleh");
+        for(let i = 0; i < itCompanies.length; i++)
+        {
+            console.log(itCompanies[i], i);
+        }
+        //Ehnii, Dund, Suulchiin
+        console.log("\nEhnii, Dund, Suulchiin IT companiud");
+        let avg;
+        avg = Math.floor(itCompanies.length / 2);
+        for(let i = 0; i < itCompanies.length; i++)
+        {
+            if(i == 0)
+            {
+                console.log("Ehnii IT company: " + itCompanies[i]);
+            }
+            else if(i == avg)
+            {
+                console.log("Goliin IT company: " + itCompanies[i]);
+            }
+            else if(i == itCompanies.length - 1)
+            {
+                console.log("Suuliin IT company: " + itCompanies[i]);
+            }
+        }
+
+        //Company buriig hevleh
+        console.log("\nCompany buriig hevleh");
+        for(let i = 0; i < itCompanies.length; i++)
+        {
+            console.log(itCompanies[i]);
+        }
+
+        //Companii ner tus buriig tom usgeer solij gargaj ireh
+        console.log("\nCompanii ner tus buriig tom usgeer solij gargaj ireh");
+        for(let i = 0; i < itCompanies.length; i++)
+        {
+            console.log(itCompanies[i].toUpperCase());
+        }
+
+        //Array -g oguulber bolgon hevle
+        console.log("\nAraa -g oguulber bolgon hevle");
+        let taslal = ", ";
+        let oguulberiinTogsgol = " zereg medeelliin tehnologiin tomoohon companiud.";
+        let butenOguulber = "";
+        for(let i = 0; i < itCompanies.length; i++)
+        {
+            if(i == itCompanies.length - 1)
+            {
+                itCompanies[i] += oguulberiinTogsgol;
+            }
+            else
+            {
+                itCompanies[i] += taslal;
+            }
+            butenOguulber += itCompanies[i];
+        }
+        console.log(butenOguulber);
+    </script>
+</body>
+</html>
