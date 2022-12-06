@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ugugdsun massive dahi davhardsan utga</title>
 </head>
+
 <body>
     <script>
-        let array1 = [4, 2, 32, 4, 1, 12, 1];
+        let array1 = [4, 2, 32, 4, 1, 12, 1, 4, 4, 1];
         let array2 = [];
-        let i_1 = 0, i_2 = 1, i_3 = 0, count = 0;
-        console.log(array1[i_1]);
-        console.log(array1[i_2]);
-        while(i_1 <= array1.length - 2)
+        for (let i = 0; i < array1.length - 1; i++) 
         {
-        
+            for (let j = i + 1; j < array1.length; j++) 
+            {
+                if (array1[i] == array1[j]) 
+                {
+                    array2[array2.length] = array1[i];
+                }
+            }
+            for (let k = array2.length - 2; k >= 0; k--) 
+            {
+                if(array2[array2.length - 1] == array2[k])
+                {
+                    array2.length--;
+                }
+            }
         }
         console.log(array2);
     </script>
 </body>
+
 </html>
