@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of numbers</title>
+</head>
+<body>
+    <script>
+        let arrayOfNumber = [43, 56, 23, 89, 88, 90, 99, 652, 15, 290, 11];
+        let niilber = 0;
+        for(let i = 0; i < arrayOfNumber.length; i++)
+        {
+            niilber += arrayOfNumber[i];
+        }
+        console.log("Niilber: " + niilber);
+        let max = arrayOfNumber[0];
+        for(let i = 1; i < arrayOfNumber.length; i++)
+        {
+            if(max <= arrayOfNumber[i])
+            {
+                max = arrayOfNumber[i];
+            }
+        }
+        console.log("Max: " + max);
+        let min = arrayOfNumber[0];
+        for(let i = 1; i < arrayOfNumber.length; i++)
+        {
+            if(min >= arrayOfNumber[i])
+            {
+                min = arrayOfNumber[i];
+            }
+        }
+        console.log("Min: " + min);
+
+        arrayOfNumber.length = arrayOfNumber.length + 1;
+        let index = arrayOfNumber.length - 1;
+        for(let i = arrayOfNumber.length - 2; i >= 0; i--)
+        {
+            arrayOfNumber[index] = arrayOfNumber[i];
+            index = arrayOfNumber.length - 1;
+            if(i == 0)
+            {
+                arrayOfNumber[0] = 5; //Duriin too;
+            }
+        }
+        console.log(arrayOfNumber);
+
+        arrayOfNumber.length++;
+        arrayOfNumber[arrayOfNumber.length - 1] = 1; //Duriin too
+        console.log(arrayOfNumber);
+    </script>
+</body>
+</html>

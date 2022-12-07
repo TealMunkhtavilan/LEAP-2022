@@ -13,6 +13,13 @@
         let arr2 = [4, 2, 34, 4, 12, 1];
         let arr3 = [];
         let urjver = "";
+        let zoruu;
+        zoruu = arr2.length - arr1.length;
+        arr1.length = arr1.length + zoruu;
+        for(let j = 5; j < arr1.length; j++)
+        {
+            arr1[j] = 1;
+        }
         for(let i = 0; i < arr1.length; i++)
         {
            arr3[i] = arr1[i] * arr2[i];
