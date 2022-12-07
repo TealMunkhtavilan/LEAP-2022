@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert string</title>
+</head>
+<style>h1{text-align: center; background-color: greenyellow;}</style>
+<body>
+    <h1>Convert string</h1>
+    <script>
+       let input1 = "Hello";
+       let input2 = "World";
+        for(let i = 1; i < input1.length; i++)
+        {
+            if(input1.substr(0, i) == input1.substr(0, i).toUpperCase())
+            {
+                input1.charAt(0).toLowerCase();
+            }
+            else
+            {
+                input1.substr(i, input1.length).toUpperCase();
+            }
+        }
+        console.log(input1);
+    </script>
+</body>
+</html>

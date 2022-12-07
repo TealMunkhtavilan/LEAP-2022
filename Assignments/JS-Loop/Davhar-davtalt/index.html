@@ -17,10 +17,48 @@
         {
             for(let j = 0; j < i; j++)
             {
-                tsuvaa = tsuvaa + String(i);
+                if(j == 0)
+                {
+                    tsuvaa = tsuvaa + "- ";
+                }
+                if(j == (i - 1))
+                {
+                    tsuvaa = tsuvaa + String(too) + "\n";
+                }
+                else
+                {
+                    tsuvaa = tsuvaa + String(too) + " ";
+                }
+                too++;
             }
-            console.log(tsuvaa);
+            too = 1;
         }
+        console.log(tsuvaa);
+        
+        let n2 = 5
+        let tsuvaa2 = "";
+        let too2 = n2;
+        for(let i = n2; i > 0; i--)
+        {
+            for(let j = i; j > 0; j--)
+            {
+                if(j == i)
+                {
+                    tsuvaa2 = tsuvaa2 + "- ";
+                }
+                if(j == 1)
+                {
+                    tsuvaa2 = tsuvaa2 + String(too2) + "\n";
+                }
+                else
+                {
+                    tsuvaa2 = tsuvaa2 + String(too2) + " ";
+                }
+                too2--;
+            }
+            too2 = n2;
+        }
+        console.log(tsuvaa2)
     </script>
 </body>
 </html>

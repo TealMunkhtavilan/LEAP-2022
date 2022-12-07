@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number digits</title>
+</head>
+<style>h1{text-align: center; background-color: greenyellow;}</style>
+<body>
+    <h1>Number Digits</h1>
+    <script>
+        let count = 0;
+        let number = Number(prompt("Enter number: ", ""));
+        let n = number;
+        for(let i = 0; n > 0; i++)
+        {
+            n = Math.floor(n / 10);
+            count++;
+        }
+        console.log(number + ": " + count + " orontoi");
+    </script>
+</body>
+</html>
