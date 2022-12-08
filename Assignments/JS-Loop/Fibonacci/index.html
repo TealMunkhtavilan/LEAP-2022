@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fubonacci</title>
+</head>
+<style>h1{text-align: center; background-color: greenyellow;}</style>
+<body>
+    <h1>Fubonacci</h1>
+    <script>
+        let n = Number(prompt("Enter number: ", ""));
+        let a1 = 0, a2 = 1;
+        for(let a3 = 0; a3 <= n; a3 = a1 + a2)
+        {
+            console.log(a3);
+            a1 = a2;
+            a2 = a3;
+        }
+    </script>
+</body>
+</html>

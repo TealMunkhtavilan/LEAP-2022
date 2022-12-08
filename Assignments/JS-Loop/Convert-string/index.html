@@ -10,20 +10,36 @@
 <body>
     <h1>Convert string</h1>
     <script>
-       let input1 = "Hello";
-       let input2 = "World";
-        for(let i = 1; i < input1.length; i++)
+       let input = "Hello World";
+       let output1 = "";
+        for(let i = 0; i < input.length; i++)
         {
-            if(input1.substr(0, i) == input1.substr(0, i).toUpperCase())
+            if(input[i] == input[i].toUpperCase())
             {
-                input1.charAt(0).toLowerCase();
+                output1 = output1 + input[i].toLowerCase();
+            
+            }
+            else 
+            {
+                output1 = output1 + input[i].toUpperCase();
+            }
+        }
+        console.log(output1);
+
+        let example2 = "This Is STRING!";
+        let output2 = "";
+        for(let i = 0; i < example2.length; i++)
+        {
+            if(example2[i] == example2[i].toUpperCase())
+            {
+                output2 = output2 + example2[i].toLowerCase();
             }
             else
             {
-                input1.substr(i, input1.length).toUpperCase();
+                output2 = output2 + example2[i].toUpperCase();
             }
         }
-        console.log(input1);
+        console.log(output2);
     </script>
 </body>
 </html>

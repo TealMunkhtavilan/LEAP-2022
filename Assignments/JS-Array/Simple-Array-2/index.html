@@ -6,10 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Array - 2</title>
 </head>
+<style>h1{text-align: center; background-color: greenyellow;}</style>
 <body>
-    
+    <h1>Simple Array - 2</h1>
     <script>
-        //Daraa asuuh;
+        let itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+        let firstThree = [];
+        let lastThree = [];
+        let lastThree_i = 0;
+        for(let i = 0; i < 3; i++)
+        {
+            firstThree[i] = itCompanies[i]; 
+        }
+        console.log(firstThree);
+
+        for(let i = itCompanies.length - 1; i > itCompanies.length - 4; i--)
+        {
+            lastThree[lastThree_i] = itCompanies[i];
+            lastThree_i++;
+        }
+        console.log(lastThree);
+        
+
     </script>
 </body>
 </html>
