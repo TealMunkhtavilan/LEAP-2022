@@ -6,33 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validate Phone Number</title>
 </head>
+<style>h1{text-align: center; background-color:azure;}</style>
 <body>
-    
+    <h1>Validate Phone Number</h1>
     <script>
-        let input = prompt("Utasnii dugaaraa oruulna uu: ", "");
-        let rawNumbers = input.substr(1, 11);
-        let isNumber = Number(rawNumbers);// 97690410922
-        if(Number.isInteger(isNumber))
+        let number = prompt("Enter phone number: ", "");
+        if(number != Number(number))
         {
-            if(input.substr(0, 4) == "+976")
-            {
-                if(input.length == 12)
-                {
-                    console.log("Ta mongol ulsiin utasnii dugaariig zov oruullaa.");
-                }
-                else
-                {
-                    console.log("Ta mongol ulsiin utasnii dugaariig buruu oruullaa.");
-                }
-            }
-            else
-            {
-                console.log("Mongol bish baina!!!");
-            }
+            console.log("It's not number");
         }
         else
         {
-            console.log("Useg yavaad baina!!!");
+            if(number.substr(0, 4) != "+976")
+            {
+                console.log("It's not mongolian number");
+            }
+            else
+            {
+                if(number.length == 12)
+                {
+                    console.log("You've entered mongolian phone number correct");
+                }
+                else
+                {
+                    console.log("You've entered number wrong!");
+                }
+            }
         }
     </script>
 </body>

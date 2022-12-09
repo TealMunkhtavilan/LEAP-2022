@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register number validation</title>
+    <title>Register Number validation</title>
 </head>
+<style>h1{text-align: center; background-color:azure;}</style>
 <body>
-    
+    <h1>Register Number validation</h1>
+    <script>
+        let register = prompt("Enter register number: ", "");
+        if(register.length != 10)
+        {
+            console.log("Length is lower than 10!");
+        }
+        else if(typeof (register[0]) == Number(register[0]) || typeof(register[1]) == Number[register[1]])
+        {
+            console.log("It's not register number!");
+        }
+        else
+        {
+            if(register.substr(2, 8) != Number(register.substr(2, 8)))
+            {
+                console.log("You've entered Mongolian register number incorrect!");
+            }
+            else
+            {
+                console.log("You've entered Mongolian register number correct!");
+            }
+        }
+    </script>
 </body>
 </html>
