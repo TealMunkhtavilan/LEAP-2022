@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktsuud zohioh</title>
+</head>
+<style>h1{text-align: center; background-color: aquamarine;}</style>
+<body>
+    <h1>Funktsuud zohioh</h1>
+    <script>
+        //Bodlogo 1
+        let findMax = (a, b) =>
+        {
+            if(a > b)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
+        }
+        let max = findMax(2, 3);
+        console.log(max);
+
+        //Bodlogo 2
+        function findNumberFromArray(param, number)
+        {
+            let indexes = "";
+            let count = 0;
+            for(let i = 0; i < param.length; i++)
+            {
+                if(param[i] == number)
+                {
+                    indexes = indexes + i + " ";
+                    count++;
+                }
+            }
+            if(count == 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return indexes;
+            }
+        }
+        let array = [1, 2, 3, 5, 5, 6, 5];
+        let input = Number(prompt("Number: ", ""));
+        let indexOfNumber = findNumberFromArray(array, input);
+        console.log("Index of " + input + " is " + indexOfNumber);
+
+        //Bodlogo 3
+        function findWordFromArray(param, word)
+        {
+            let indexes = "";
+            let count = 0;
+            for(let i = 0; i < param.length; i++)
+            {
+                if(param[i].toLowerCase() == word.toLowerCase())
+                {
+                    indexes = indexes + i + " ";
+                    count++;
+                }
+            }
+            if(count == 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return indexes;
+            }
+        }
+
+        let inputWord = prompt("Enter word: ", "");
+        let arrayWords = ["Leaves", "DaniSogen", "Raimu", "Overgrown", "Yasobi", "Leaves"];
+        console.log("Index of word " + inputWord + " is " + findWordFromArray(arrayWords, inputWord));
+
+        //Bodlogo 4
+        let genRandomNum = (num1, num2) =>
+        {
+            let randomNum = Math.floor(Math.random() * (num2 - num1)) + num1;
+            return randomNum;
+        }
+        let inputNum1 = 1;
+        let inputNum2 = 100;
+        let rand = genRandomNum(inputNum1, inputNum2);
+        console.log("Random number between given interval: " + rand);
+
+        //Bodlogo 5
+        let avgOfNumbers = function (param)
+        {
+            let avg = 0;
+            for(let i = 0; i < param.length; i++)
+            {
+                avg = avg + param[i];
+            }
+            avg = avg / param.length;
+            return avg;
+        }
+        let avgArray = [10, 20, 30, 20, 40, 40, 40, 80, 90, 70];
+        let avg = avgOfNumbers(avgArray);
+        console.log("Avarage of array: " + avg);
+
+        //Bodlogo 6
+        let sumOfArray = function(param)
+        {
+            let sum = 0;
+            for(let i = 0; i < param.length; i++)
+            {
+                sum = sum + param[i];
+            }
+            return sum;
+        }
+        let sumArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log("Sum of array: " + sumOfArray(sumArray));
+
+        //Bodlogo 7
+        let isPrimeNumber = (number) =>
+        {
+            let huvaagch = 0;
+            for(let i = 1; i <= number; i++)
+            {
+                if(number % i == 0)
+                {
+                    huvaagch++;
+                }
+            }
+            if(huvaagch > 2)
+            {
+                console.log(number + " anhnii too bish");
+            }
+            else
+            {
+                console.log(number + " anhnii too mun");
+            }
+        }
+        let inputPrime  = Number(prompt("Enter number: ", ""));
+        isPrimeNumber(inputPrime);
+
+        //Bodlogo 8
+        function customUpperCase(input)
+        {
+            let output = "";
+            for(let i = 0; i < input.length; i++)
+            {
+                    output = output + input[i].toUpperCase();
+            }
+            console.log(output);
+        }
+        let lowerWord = "Hello World!";
+        customUpperCase(lowerWord);
+
+        //Bodlogo 9
+        let lowerCase = word => word.toLowerCase();
+        let upperWord = "HELLO WORLD!";
+        console.log(lowerCase(upperWord));
+    </script>
+</body>
+</html>
