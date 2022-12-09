@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Vol.2</title>
+</head>
+<style>h1{text-align: center; background-color: wheat;} </style>
+<body>
+    <h1>Tip Vol.2</h1>
+    <script>
+        let totalCost = (cost) => {let t_cost = cost >= 5000 && cost <= 30000 ? cost = cost / 100 * 115
+                                                                            : cost = cost / 100 * 120; return t_cost;}
+        let tolbor = totalCost(5000);
+        console.log(tolbor);
+
+        let zuvhunNemegdel = (cost) => {let nemegdel = cost >= 5000 && cost <= 30000 ? cost = cost / 100 * 15
+        : cost = cost / 100 * 20; return nemegdel;}
+
+        let nemegdelTulbur = zuvhunNemegdel(5000);
+        console.log(nemegdelTulbur);
+
+        let avgCost = (cost) => {let avg = cost >= 5000 && cost <= 30000 ? cost = cost / 100 * 115 / 2 
+        : cost = cost / 100 * 120 / 2; return avg;}
+        let dundajTulbur = avgCost(5000);
+        console.log(dundajTulbur);
+
+
+        console.log("Undsen une: 3000" + "\n" + "Niit tulbur: " + totalCost(3000) + "\n" + "Nemegdel: " + zuvhunNemegdel(3000) + );
+    </script>
+</body>
+</html>
