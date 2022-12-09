@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tegsh too, sondgoi too ologch</title>
+</head>
+<style>h1{text-align: center; background-color: wheat;} </style>
+<body>
+    <h1>Tegsh too, sondgoi too ologch</h1>
+    <script>
+        function tegshInputs()
+        {
+            let inputs = [];
+            let num1 = Number(prompt("Enter first number: ", ""));
+            let num2 = Number(prompt("Enter second number: ", ""));
+            inputs[0] = num1;
+            inputs[1] = num2;
+            return inputs;
+        }
+        function evenNumbers(a, b)
+        {
+            let array = [];
+            let index = 0;
+            for(let i = a; i <= b; i++)
+            {
+                if(i % 2 == 0)
+                {
+                    array[index] = i;
+                    index++;
+                }
+            }
+            return array;
+        }
+        let interval = [];
+        interval = tegshInputs();
+        let min = interval[0];
+        let max = interval[1];
+        let tegshArray = evenNumbers(min, max);
+        console.log(tegshArray);
+
+        function sondgoiInputs()
+        {
+            let inputs = [];
+            let num1 = Number(prompt("Enter first interval number of odd: ", ""));
+            let num2 = Number(prompt("Enter second interval number of odd: ", ""));
+            inputs[0] = num1;
+            inputs[1] = num2;
+            return inputs;
+        }
+        let oddNumbers = (a, b) =>
+        {
+            let arrayOdd = [];
+            let index = 0;
+            for(let i = a; i <= b; i++)
+            {
+                if(i % 2 != 0)
+                {
+                    arrayOdd[index] = i;
+                    index++;
+                }
+            }
+            return arrayOdd;
+        }
+
+        let oddInterval = [];
+        oddInterval = sondgoiInputs();
+        let origin = oddInterval[0];
+        let end = oddInterval[1];
+        let sondgoiArray = oddNumbers(origin, end);
+        console.log(sondgoiArray);
+    </script>
+</body>
+</html>
