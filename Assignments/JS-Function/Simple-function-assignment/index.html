@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple function assignment</title>
+</head>
+<style>h1{text-align: center; background-color: aquamarine;}</style>
+<body>
+    <h1>Simple function assignment</h1>
+    <script>
+        function myFullNameNoPrompt()// Buten ner hevlene
+        {
+            console.log("Munkhtavilan Erdenetovch");
+        }
+        myFullNameNoPrompt();
+
+        //Buten ner hevlene gehdee garnaas utga avna
+        function myFullName(firstName, lastName)
+        {
+            console.log(firstName + " " + lastName);
+        }
+        let fName = prompt("Firstname: ", "");
+        let lName = prompt("Lastname: ", "");
+        myFullName(fName, lName);
+
+        //Declare a function  and it takes two parameters and it returns sum.
+        let sum = (num1, num2) =>
+        {
+            return num1 + num2;
+        }
+        console.log("Niilber: " + sum(2, 7));
+
+        //An area of a rectangle is calculated as follows: . Write a function which calculates.
+        let areaOfRectangle = function (a, b)
+        {
+            return a * b;
+        }
+        console.log("Area of rectangle: " + areaOfRectangle(4, 3));
+
+        //A perimeter of a rectangle is calculated as follows: . Write a function which calculates
+        function perimeterOfRectangle(a, b)
+        {
+            return (a + b) * 2;
+        }
+        console.log("Perimeter of rectangle: " + perimeterOfRectangle(5, 5));
+    </script>
+</body>
+</html>
