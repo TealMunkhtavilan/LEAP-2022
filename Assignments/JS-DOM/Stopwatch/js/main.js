@@ -1,0 +1,1 @@
+document.getElementById("minutes").innerHTML = "50" + Date();
