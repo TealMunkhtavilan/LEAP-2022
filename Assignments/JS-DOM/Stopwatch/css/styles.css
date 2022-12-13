@@ -14,7 +14,8 @@
     justify-content: center;
     text-align: center;
 }
-h1{
+p{
     color: greenyellow;
     font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
