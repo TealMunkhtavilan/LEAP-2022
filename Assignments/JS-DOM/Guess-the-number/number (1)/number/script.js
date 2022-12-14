@@ -28,6 +28,11 @@ function buttonOnClick()
             document.body.style.backgroundColor = "#60b347";
             message.innerHTML = "Зөв таалаа...";
         }
+        if(scoreValue == 0)
+        {
+            message.innerHTML = "Та хожигдлоо...";
+            document.getElementsByTagName("button")[1].style.display = "none";
+        }
     }
     console.log(inputValue);
 }
