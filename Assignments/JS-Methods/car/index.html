@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+</head>
+<style>h1{text-align: center; background: firebrick;}</style>
+<body>
+    <h1>car</h1>
+    <script>
+        let search = "a";
+        let result =[[]];
+        let carBrands = [
+            ['Aston Martin Lagonda Ltd', 'UK', 2016],
+            ['Audi', 'Germany', 2016],
+            ['BMW', 'Germany', 2016],
+            ['Chevrolet', 'USA', 2016],
+            ['Dodge', 'USA', 2016],
+            ['Ferrari', 'Italy', 2016],
+            ['Honda', 'Japan', 2016],
+            ['Jaguar', 'UK', 2016],
+            ['Lamborghini', 'Italy', 2016]
+        ];
+        let firstLet = carBrands[0][0][0];
+        console.log(firstLet.toLowerCase());
+        console.log(carBrands);
+        // for(let i = 0; i < carBrands.length; i++)
+        // {
+        //     if(search == carBrands[i][0][0])
+        //     {
+        //         result[result.length] = carBrands[i];
+        //     }
+        // }
+        result[result.length - 1] = carBrands[0];
+        console.log("Brand: " + result[0][0] + "\nCountry: " + result[0][1] + "\nYear: " + result[0][2]);
+    </script>
+</body>
+</html>
