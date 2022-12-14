@@ -10,26 +10,15 @@
 <body>
     <h1>Parameterize a string</h1>
     <script>
-        const str = "This is string!";
-        const words = str.split(' ');
-        const wordsMod = words.join('-');
-        console.log(wordsMod);
-
-
-        // let count = 0;
-        // let str = "This is string!";
-        // for(let i = 0; i < str.length; i++)
-        // {
-        //     if(str[i] == " ")
-        //     {
-        //         count++;
-        //     }    
-        // }
-        // for(let i = 0; i < count; i++)
-        // {
-
-        // }
-        // console.log(count);
+        let parameterizeStr = (str) =>
+        {
+             const words = str.split(' ');
+             const wordsMod = words.join('-');
+             console.log(wordsMod);
+        }
+       // const str = "This is SPARTA!!!";
+        const str = prompt("Enter: ", "");
+        parameterizeStr(str);
     </script>
 </body>
 </html>
