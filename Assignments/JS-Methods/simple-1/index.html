@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple 1</title>
+</head>
+<style>h1{text-align: center; background-color: saddlebrown;}</style>
+<body>
+    <h1>Simple 1</h1>
+    <script>
+        console.log("Sort the array using  method");
+        let array = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"];
+        array.sort();
+        console.log(array);
+
+        console.log("\nReverse the array using  method");
+        let reversed = array;
+        reversed.reverse();
+        console.log(reversed);
+
+        console.log("\nRemove the first IT company from the array");
+        let removedArr = array;
+        let removedFirst = removedArr.shift();
+        console.log(removedFirst);
+        console.log(removedArr);
+
+        console.log("\nRemove the middle IT company or companies from the array");
+        let remMid = array.slice(2, 4);
+        console.log(remMid);
+
+        console.log("\nRemove the last IT company from the array");
+        let popLast = array;
+        console.log(popLast.pop());
+        console.log(popLast);
+
+        console.log("\nRemove all IT companies");
+        let removeAll = array;
+        removeAll.splice(0, 5, "");
+        console.log(removeAll);
+    </script>
+</body>
+</html>
