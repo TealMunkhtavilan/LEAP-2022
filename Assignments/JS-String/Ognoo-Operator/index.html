@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ognoo Operator</title>
+</head>
+<style>h1{text-align: center; background: teal;}</style>
+<body>
+    <h1>Ognoo hevlen gargah, Operatoriig oloh</h1>
+    <script>
+        let ognoo = prompt("Ognoo: ", "");
+        let sar = prompt("Sar: ", "");
+        let udur = prompt("Udur: ", "");
+        if(sar.length == 1)
+        {
+            sar = "0" + sar;
+        }
+        if(udur.length == 1)
+        {
+            udur = "0" + udur;
+        }
+        console.log("\"" + ognoo + "-" + sar + "-" + udur + "\"");
+
+        let phoneNumber = prompt("Phone number: ", "");
+        let firstTwo = phoneNumber.substr(0, 2);
+        switch(firstTwo)
+        {
+            case "99": console.log(phoneNumber + " - Mobicom");
+            break;
+            case "95": console.log(phoneNumber + " - Mobicom");
+            break;
+            case "85": console.log(phoneNumber + " - Mobicom");
+            break;
+            case "94": console.log(phoneNumber + " - Mobicom");
+            break;
+            case "80": console.log(phoneNumber + " - Unitel");
+            break;
+            case "86": console.log(phoneNumber + " - Unitel");
+            break;
+            case "88": console.log(phoneNumber + " - Unitel");
+            break;
+            case "89": console.log(phoneNumber + " - Unitel");
+            break;
+            case "96": console.log(phoneNumber + " - Skytel");
+            break;
+            case "91": console.log(phoneNumber + " - Skytel");
+            break;
+            case "90": console.log(phoneNumber + " - Skytel");
+            break;
+            case "83": console.log(phoneNumber + " - G-Mobile");
+            break;
+            case "93": console.log(phoneNumber + " - G-Mobile");
+            break;
+            case "97": console.log(phoneNumber + " - G-Mobile");
+            break;
+            case "98": console.log(phoneNumber + " - G-Mobile");
+            break;
+            case "60": console.log(phoneNumber + " - ONDO");
+            break;
+            case "66": console.log(phoneNumber + " - ONDO");
+            break;
+            default: console.log("Utasnii dugaar buruu baina.");
+            break;
+        }
+    </script>
+</body>
+</html>
