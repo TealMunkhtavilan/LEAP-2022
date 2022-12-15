@@ -10,7 +10,8 @@
 <body>
     <h1>car</h1>
     <script>
-        let search = "a";
+        let result_i = 0;
+        let searchByLets = prompt("Search car by letter: ", "");
         let result =[[]];
         let carBrands = [
             ['Aston Martin Lagonda Ltd', 'UK', 2016],
@@ -23,18 +24,76 @@
             ['Jaguar', 'UK', 2016],
             ['Lamborghini', 'Italy', 2016]
         ];
-        let firstLet = carBrands[0][0][0];
-        console.log(firstLet.toLowerCase());
+
+        //Mashiniig ehnii usgeer haih
+        let firstLet;
         console.log(carBrands);
-        // for(let i = 0; i < carBrands.length; i++)
-        // {
-        //     if(search == carBrands[i][0][0])
-        //     {
-        //         result[result.length] = carBrands[i];
-        //     }
-        // }
-        result[result.length - 1] = carBrands[0];
-        console.log("Brand: " + result[0][0] + "\nCountry: " + result[0][1] + "\nYear: " + result[0][2]);
+        for(let i = 0; i < carBrands.length; i++)
+        {
+            firstLet = carBrands[i][0][0].toLowerCase();
+            if(searchByLets.toLowerCase() == firstLet)
+            {
+                result[result_i] = carBrands[i];
+                result_i++;
+            }
+        }
+
+        if(result[0] != "")
+        {
+            for(let i = 0; i < result.length; i++)
+            {
+                console.log("Brand: " + result[i][0] + "\nCountry: " + result[i][1] + "\nYear: " + result[i][2]);
+            }
+        }
+        else
+        {
+            console.log("Car not found!");
+        }
+
+        //Mashiniig ulsaar haih
+        result = [[]];
+        result_i = 0;
+        let country;
+        let searchByCount = prompt("Search car by country: ", "");
+        for(let i = 0; i < carBrands.length; i++)
+        {
+            country = carBrands[i][1].toLowerCase();
+            if(searchByCount.toLowerCase() == country)
+            {
+                result[result_i] = carBrands[i];
+                result_i++;
+            }
+        }
+        
+        if(result[0] != "")
+        {
+            for(let i = 0; i < result.length; i++)
+            {
+                console.log("Brand: " + result[i][0] + "\nCountry: " + result[i][1] + "\nYear: " + result[i][2]);
+            }
+        }
+        else
+        {
+            console.log("Car not found!");
+        }
+
+        //Mur data bolon, niit heden ulsiin brand baigaag oloh
+        let count = 0;
+        let regions = ["UK", "Germany", "USA", "Italy", "Japan"];
+        for(let j = 0; j < regions.length; j++)
+        {
+            for(let i = 0; i < carBrands.length; i++)
+            {
+                if(regions[j] == carBrands[i][1])
+                {
+                    count++;
+                }
+            }
+            regions[j] = regions[j] + " - " + count;
+            count = 0;
+        }
+        console.log(regions.unshift(("Total: " + carBrands.length)));
+        console.log(regions);
     </script>
 </body>
 </html>
