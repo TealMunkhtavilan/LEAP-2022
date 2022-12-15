@@ -9,116 +9,157 @@
 <style>h1{text-align: center; background: gray;}</style>
 <body>
     <h1>Registeriin dugaar</h1>
-    <script>
-        let register = "АА10293433";
-        
-        //Register number mon esehiig shalgadag function
-        function isCorrectReg(register)
+    <script>// 2 -r sariin 28, 29 -iig tootsoogui bolno.
+        let register = "УИ00292233";
+        function isCorrectReg(register) //Registeriin dugaar mon esehiig shalgah function
         {
+            let checkReg;
+            let year = register.slice(2, 4);
+            let month = register.slice(4, 6);
+            let day = register.slice(6, 8);
             if(register.length != 10)
             {
-                return 0;
-            }
-            else if(register[0] == Number(register[0]) || register[1] == Number(register[1]))
-            {
-                return 0;
+                checkReg = 0;
             }
             else
             {
-                if(register.substr(2, 8) != Number(register.substr(2, 8)))
+                if(register.at(0) == Number(register.at(0) || register.at(1)) == Number(register.at(1)))
                 {
-                    return 0;
+                    checkReg = 0;
                 }
                 else
                 {
-                    return 1;
+                    if(month.at(0) > 3 || ((month > 12 && month < 21) || month > 32))
+                    {
+                        checkReg = 0;
+                    }
+                    else
+                    {
+                        if(day > 31)
+                        {
+                            checkReg = 0;
+                        }
+                        else
+                        {
+                            checkReg = 1;
+                        }
+                    }
                 }
             }
+            return checkReg;
         }
 
-        //Gender shalgadag function
-        function getGender(arr)
+        function getGender(register) //Huis shalga function
         {
-            const genderNum = arr.at(8);
+            let numOfGen = register.at(8);
             let gender;
-            if(Number(genderNum % 2 != 0))
+            if(Number(numOfGen) % 2 == 0)
             {
-                gender = "Эрэгтэй";  
+               gender = "Emegtei";
             }
             else
             {
-                gender = "Эмэгтэй";
+                gender = "Eregtei";
             }
-            return gender; // Genderiig butsaana
+            return gender;
         }
 
-        //Tursun udur shalgadag function
-        let getBirthdate = (arr) => //002922
+        function getBirthDay(register)//Tursun udriig avdag function
         {
-            let birthDay = arr.slice(2, 8);
-            let day = arr.slice(6, 8);
-            let month;
-            let year = arr.slice(2, 4);
-            let birthDay_result = "";
-            if(birthDay.at(2) == 2 || birthDay.at(2) == 3)
+            let birthDay;
+            const year = register.slice(2, 4);
+            const month = register.slice(4, 6);
+            const day = register.slice(6, 8);
+            if(month.at(0) == 2)
             {
-                month = Number(birthDay.at(2)) - 2;
-                if(day >= 31 || day == 0)
-                {
-                    console.log("Register number birthday is wrong!");
-                }
-                else
-                {
-                    birthDay_result = "20" + year + "/" +  month + birthDay.at(3) + "/" + day;
-                    return birthDay_result;
-                }
+                birthDay = "20" + year + "/" + "0" + month.at(1) + "/" + day;
+            }
+            else if(month.at(0) == 3)
+            {
+                let month3 = Number(month.at(0) - 2);
+                birthDay = "20" + year + "/" + month3 +  month.at(1) + "/" + day;
             }
             else
             {
-                if(day >= 31 || day == 0)
-                {
-                    console.log("Register number birthday is wrong!");
-                }
-                else
-                {
-                    birthDay_result = "19" + year + "/" +  month + "/" + day;
-                    return birthDay_result;
-                }
+                birthDay = "19" + year + "/" + month + "/" + day;
             }
+            return birthDay;
         }
 
-        //Tursun gazar shalgadag function;
-        function getBirthRegion(arr)
+        function getBirthRegion(register)
         {
-            let regionLetter = arr.at(0);
+            const regLetter = register.at(0).toUpperCase();
             let region;
-            switch (regionLetter)
+            switch(regLetter)
             {
-                case 'А': region = 'Архангай'; break;
-                case 'Б': region = 'Баян-Өлгий'; break;
-                default:  region = ("Region is not available"); break;
+                case "А": region = "Архангай";
+                break;
+                case "Б": region = "Баян-Өлгий";
+                break;
+                case "В" : region = "Баянхонгор";
+                break;
+                case "Г" : region = "Булган";
+                break;
+                case "Д" : region = "Говь-Алтай";
+                break;
+                case "Е" : region = "Дорноговь";
+                break;
+                case "Ж" : region = "Дорнод";
+                break;
+                case "З" : region = "Дундговь";
+                break;
+                case "И" : region = "Завхан";
+                break;
+                case "Й" : region = "Өвөрхангай";
+                break;
+                case "К" : region = " Өмнөговь";
+                break;
+                case "Л" : region = "Сүхбаатар";
+                break;
+                case "М" : region = "Сэлэнгэ";
+                break;
+                case "Н" : region = "Төв";
+                break;
+                case "О" : region = "Увс";
+                break;
+                case "П" : region = "Ховд";
+                break;
+                case "Р" : region = "Хөвсгөл";
+                break;
+                case "С" : region = "Хэнтий";
+                break;
+                case "Т" : region = "Дархан-Уул";
+                break;
+                case "Ф" : region = "Орхон";
+                break;
+                case "Х" : region = "Говьсүмбэр";
+                break;
+                case "У" : region = "Улаанбаатар";
+                break;
+                case "Ц" : region = "Улаанбаатар";
+                break;
+                default: region = "No region";
+                break;
             }
             return region;
         }
 
-        //Deerh buh utga hevledeg function
         function getRegisterInfo(register)
         {
             const gender = getGender(register);
-            const birthDay = getBirthdate(register);
-            const birthRegion = getBirthRegion(register);
+            const birthDay = getBirthDay(register);
+            const region = getBirthRegion(register);
             console.log(gender);
             console.log(birthDay);
-            console.log(birthRegion);
+            console.log(region);
         }
-        let isReg = isCorrectReg(register);
-        if(isReg != 1)
+        let ok = isCorrectReg(register);
+        if(ok != 1)
         {
-            console.log("Register number entered wrong!");
+            console.log("Registeriin dugaar bish baina.");
         }
         else
         {
-            //let regArr = register.split(''); // function ruu oroh utga;
             getRegisterInfo(register);
         }
 
