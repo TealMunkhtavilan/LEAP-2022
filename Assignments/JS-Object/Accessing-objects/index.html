@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accsessing objects</title>
+</head>
+<style>h1{text-align: center; background:sandybrown;}</style>
+<body>
+    <h1>Accessing object</h1>
+    <script>
+        let students = [
+            {
+                name: "Sed-Erdene",
+                age: 19,
+                gender: "male",
+            },
+            {
+                name: "Indra",
+                age: 19,
+                gender: "female",
+            },
+            {
+                name: "Hatnaa",
+                age: 21,
+                gender: "male",
+            },
+            {
+                name: "Temuulen",
+                age: 23,
+                gender: "male",
+            },
+            {
+                name: "Namuun",
+                age: 23,
+                gender: "female"
+            },
+        ]
+        
+        function findGenders(students)
+        {
+            let f_count = 0;
+            let m_count = 0;
+            let genders = {female: f_count, male: m_count};
+            for(let i = 0; i < students.length; i++)
+            {
+                if(students[i].gender == "female")
+                {
+                    f_count++;
+                }
+                else
+                {
+                    m_count++;
+                }
+            }
+            genders.female = f_count;
+            genders.male = m_count;
+            return genders;
+        }
+
+        let genders_count = findGenders(students);
+        console.log(genders_count);
+
+        function avgAge(students)
+        {
+            let avg = 0;
+            for(let i = 0; i < students.length; i++)
+            {
+                avg = avg + students[i].age;
+            }
+            avg = avg / students.length;
+            console.log("Dundaj nas: " + avg);
+        }
+        avgAge(students);
+
+        students[0].l_name = "Gan-Erdene";
+        students[1].l_name = "Huseltbaatar";
+        students[2].l_name = "Galt-Shuvuu";
+        students[3].l_name = "Burentugs";
+        students[4].l_name = "Orgil";
+        console.log(students);
+
+        let sameAge = (students) =>
+        {
+            let sameArr = [];
+            let index = 0;
+            let min;
+            for(let i = 0; i < students.length - 1; i++)//sorter
+            {
+                for(let j = i + 1; j <= students.length - 1; j++)
+                {
+                    if(students[i].age >= students[j].age)
+                    {
+                        min = students[j];
+                        students[j] = students[i];
+                        students[i] = min;
+                    }
+                }
+            }
+            
+            for(let i = 0; i < students.length - 1; i++)
+            {
+                for(let j = i + 1; j <= students.length - 1; j++)
+                {
+                    if(students[i].age == students[j].age)
+                    {
+                        sameArr[index] = students[i];
+                        index++;
+                        sameArr[index] = students[j];
+                        index++;
+                    }
+                }
+            }
+            console.log(sameArr);
+        }
+
+        sameAge(students);
+    </script>
+</body>
+</html>
