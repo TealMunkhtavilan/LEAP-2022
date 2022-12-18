@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN-Object</title>
+</head>
+<style>h1{text-align: center; background: darkcyan;}</style>
+<body>
+    <h1>MERN-Object</h1>
+    <script>
+        let users = [
+{
+    name:   'Alex',
+    email: 'alex@alex.com',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    age: 45,
+    isLoggedIn: false,
+    points: 30
+  },
+{
+    name:   'Job',
+    email: 'job@job.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+    age: 25,
+    isLoggedIn: false,
+    points: 50
+  },
+{
+    name:   'Brook',
+    email: 'daniel@daniel.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+    age: 39,
+    isLoggedIn: true,
+    points: 50
+  },
+{
+    name:   'Daniel',
+    email: 'daniel@alex.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+    age: 25,
+    isLoggedIn: false,
+    points: 40
+  },
+{
+    name:   'John',
+    email: 'john@john.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+    age: 20,
+    isLoggedIn: true,
+    points: 50
+  },
+{
+    name:   'Thomas',
+    email: 'thomas@thomas.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+    age: 18,
+    isLoggedIn: false,
+    points: 40
+  },
+{
+    name:    'Paul',
+    email: 'paul@paul.com',
+    skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+    age: 25,
+    isLoggedIn: false,
+    points: 40
+  }
+]
+
+console.log(users[6].name + "\n" + users[6].email + "\n" + users[6].skills + "\n" + users[6].age + "\n" + users[6].isLoggedIn + "\n" + users[6].points);
+//Hamgiin ih chadvar ezemshsen hun
+let maxSkills = users[0].skills.length;
+let maxSkilled;
+for(let i = 1; i < users.length; i++)
+{
+    if(users[i].skills.length > maxSkills)
+    {
+        maxSkills = users[i].skills;
+        maxSkilled = users[i];
+    }
+}
+console.log(maxSkilled);
+
+let userCounts = 0;
+let above50 = 0;
+for(let i = 0; i < users.length; i++)
+{
+    if(users[i].isLoggedIn)
+    {
+        userCounts++;
+        if(users[i].points >= 50)
+        {
+            above50++;
+        }
+    }
+}
+console.log("Nevtersen: " + userCounts + " hereglegch. 50 bolon tuunees deesh onoo avsan: " + above50 + " hun baina.");
+
+//Chadvaruud ezemshsen
+console.log("Mongo DB, Express, React, Node");
+let counter = 0;
+for(let i = 0; i < users.length; i++)
+{
+    for(let j = 0; j < users[i].skills.length; j++)
+    {
+      if(users[i].skills[j] == "MongoDB" || users[i].skills[j] == "Express" || users[i].skills[j] == "React" || users[i].skills[j] == "Node")
+      {
+        counter++;
+      }
+    }
+    if(counter == 4)
+    {
+      console.log(users[i]);
+    }
+    counter = 0;
+}
+
+//Hamgiin ih nastai 3 hun
+console.log("Hamgiin ih nastai 3 hun");
+function sortAges(users)
+{
+  let max;
+  for(let i = 0; i < users.length - 1; i++)
+  {
+    for(let j = i + 1; j <= users.length - 1; j++)
+    {
+      if(users[i].age < users[j].age)
+      {
+        max = users[j];
+        users[j] = users[i];
+        users[i] = max;
+      }
+    }
+  }
+
+  for(let i = 0; i < 3; i++)
+  {
+    console.log(users[i]);
+  }
+}
+sortAges(users);
+    </script>
+</body>
+</html>
