@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suragchid</title>
+</head>
+<style>h1{text-align: center; background: antiquewhite;}</style>
+<body>
+    <h1>Suragchid</h1>
+    <script>
+        let students = [
+            {name: "Gonchigsumlai", birthOfYear: 1999, hobby: "mori", single: false,},
+            {name: "Thor", birthOfYear: 964, hobby: "beer", single: false,},
+            {name: "Peter", birthOfYear: 1996, hobby: "hanging", single: true,},
+            {name: "Axe", birthOfYear: 2000, hobby: "coding", single: true,},
+            {name: "Jaagii", birthOfYear: 1996, hobby: "gaming", single: false,},
+            {name: "Junior", birthOfYear: 2005, hobby: "reading", single: false,}
+        ];
+        
+        function getAbove20(students)
+        {
+            let above20 = [];
+            let index = 0;
+            for(let i = 0; i < students.length; i++)
+            {
+                if(2022 - students[i].birthOfYear > 20)
+                {
+                    above20[index] = students[i];
+                    index++;
+                }
+            }
+            return above20;
+        }
+        let horioosDeesh = getAbove20(students);
+        console.log(horioosDeesh);
+
+        function getAge(students)
+        {
+            let age;
+            for(let i = 0; i < students.length; i++)
+            {
+                age = 2022 - students[i].birthOfYear;
+                console.log(students[i].name + ": " + age);
+            }
+        }
+        getAge(students);
+
+        function getSingle(students)
+        {
+            let singles = [];
+            let index = 0;
+            for(let i = 0; i < students.length; i++)
+            {
+                if(students[i].single)
+                {
+                    singles[index] = students[i];
+                    index++;
+                }
+            }
+            return singles
+        }
+        let singles = [];
+        singles = getSingle(students);
+        console.log(singles);
+    </script>
+</body>
+</html>
