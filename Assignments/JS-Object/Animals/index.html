@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+</head>
+<style>h1{text-align: center; background: wheat;}</style>
+<body>
+    <h1>Animals</h1>
+    <script>
+        let animals = [
+            {type: "dog", sound: "woof",},
+            {type: "cow", sound: "moo"},
+            {type: "cat", sound: "meow"}
+        ]
+        function howAnimalsSound(animals)
+        {
+            console.log("What does the " + animals[0].type + " say?" + "\"" + animals[0].sound + "\"");
+            console.log("What does the " + animals[1].type + " say?" + "\"" + animals[1].sound + "\"");
+            console.log("What does the " + animals[2].type + " say?" + "\"" + animals[2].sound + "\"");
+        }
+        howAnimalsSound(animals);
+    </script>
+</body>
+</html>
