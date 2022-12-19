@@ -42,13 +42,139 @@
             {productName: "IPhone 14", unitPrice: 3000000, amount: 20, totalPrice: 60000000, casherId: 29, date: "2022-12-07"},
             {productName: "Chair", unitPrice: 65000, amount: 50, totalPrice: 3250000, casherId: 30, date: "2022-12-08"},
         ]
-        // //Niit borluulaltiin dun
-        // console.log("Niit boruulaltiin dun");
-        // let totalPrice = 0;
-        // data.sort(function(a,b)  {
-        //     data.totalPrice;
-        // })
-        // console.log(data);
+        //Niit borluulaltiin dun
+        let totalPrice = 0;
+        for(let i = 0; i < data.length; i++)
+        {
+            totalPrice += data[i].totalPrice;
+        }
+        console.log("Niit orlogo: " + totalPrice);
+
+        //Niit borluulagdsan baraanii too
+        let totalAmount = 0;
+        for(let i = 0; i < data.length; i++)
+        {
+            totalAmount += data[i].amount;
+        }
+        console.log("Niit borluulagdsan baraanii too: " + totalAmount);
+
+        //Hamgiin ih 5 uneer
+        console.log("\nNiit orlogoor hamgiin ih 5");
+        let byTotalPrice = data.sort(function(a, b)//ehleed sortlov
+        {
+            return a.totalPrice - b.totalPrice;
+        })
+        
+        for(let i = data.length - 1; i > data.length - 6; i--)
+        {
+            console.log(data[i]);
+        }
+
+        //Hamgiin ih 5 borluulaltiin hemjeegeer
+        console.log("\n Niit borluulataar hamgiin ih 5");
+        let byTotalAmount = data.sort(function(a,b)
+        {
+            return a.amount - b.amount;
+        }
+        )
+        for(let i = data.length - 1; i > data.length - 6; i--)
+        {
+            console.log(data[i]);
+        }
+
+        //Hamgiin baga 5 uniin dungeer
+        console.log("\n Hagmiin baga 5 unniin dungeer");
+        let byLowestPrice = data.sort(function(a, b)
+        {
+            return a.totalPrice - b.totalPrice;
+        })
+        for(let i = 0; i < 5; i++)
+        {
+            console.log(data[i]);
+        }
+
+        //Hamgiin baga 5 borluulaltaar
+        console.log("\nHamgiin baga 5 borluulaltaar");
+        let byLowestAmount = data.sort(function(a, b)
+        {
+            return a.amount - b.amount;
+        })
+        for(let i = 0; i < 5; i++)
+        {
+            console.log(data[i]);
+        }
+
+
+
+        //Uniin dungeer 10 baraanii ezleh huvi
+        console.log("\nUniin dungeer 10 baraanii ezleh huvi");
+        let topTenData = data;
+        let topTen = 0;
+        let perc = 0;
+        let top10 = topTenData.sort(function(b, a)
+        {
+            return a.totalPrice - b.totalPrice;
+        })
+        for(let i = 0; i < 10; i++)
+        {
+            topTen += topTenData[i].totalPrice;
+        }
+        perc = (topTen * 100) / totalPrice;
+        console.log(top10);
+        console.log("Top 10: " + topTen + " percentage: " + perc + "%");
+
+        //Hamgiin ih zaragdsan 5 -iin borluulaltiin huvi
+        console.log("\nHamgiin ih zaragdsan 5 -iin borluulaltiin hemjee huvi");
+        let topFiveData = data;
+        let percAmount = 0;
+        let totalPercAmount = 0;
+        let getTopFive = topFiveData.sort(function(a, b)
+        {
+            return b.amount - a.amount;
+        })
+        for(let i = 0; i < 5; i++)
+        [
+            percAmount = percAmount + topFiveData[i].amount
+        ]
+        totalPercAmount = percAmount * 100 / totalAmount;
+        console.log(percAmount);
+        console.log(totalPercAmount + "%");
+        console.log(topFiveData);
+
+        //Hamgiin baga zaragdsan uniin dungeer 5 -iin ezleh huvi
+        console.log("\nHamgiin baga zaragdsan uniin dungeer 5 -iin ezleh huviig oloh")
+        let lowFiveData = data;
+        let lowPrice5 = 0;
+        let lowPerc = 0;
+        let getLowest5Price = lowFiveData.sort(function(a, b)
+        {
+            return a.totalPrice - b.totalPrice;
+        })
+        for(let i = 0; i < 5; i++)
+        {
+            lowPrice5 += lowFiveData[i].totalPrice;
+        }
+        console.log(lowPrice5);
+        lowPerc = lowPrice5 * 100 / totalPrice;
+        console.log(lowPerc + "%");
+        console.log(lowFiveData);
+
+        //Hamgiin baga zaragdsan borluulaltiin hemjeegeer 5 -iin ezleh huvi
+        console.log("\nHamgiin baga zaragdsan borluulaltiin hemjeegeer 5 -iin ezleh huvi");
+        let lowAmount5 = 0;
+        let lowAmountPerc = 0;
+        let getLowest5Amount = data.sort(function(a, b)
+        {
+            return a.amount - b.amount;
+        })
+        for(let i = 0; i < 5; i++)
+        {
+            lowAmount5 += data[i].amount;
+        }
+        lowAmountPerc = lowAmount5 * 100 / totalAmount;
+        console.log(lowAmount5);
+        console.log(lowAmountPerc + "%");
+        console.log(getLowest5Amount);
     </script>
 </body>
 </html>
