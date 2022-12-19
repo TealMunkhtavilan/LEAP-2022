@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to change bg color</title>
+</head>
+<style>h1{text-align: center; background:seashell;}</style>
+<body>
+    <h1>Click to change bg color</h1>
+    <button id = "btn" onclick = "changeColor()">Click to set paragraph background color</button>
+    <p id = "p">Click to Set background color</p>
+    <p id = "p2">Click to Change another color</p>
+    <script>
+         let c1 = "red", c2 = "yellow", swap;
+        function changeColor()
+        {
+            document.getElementById("p").style.background = c1;
+            document.getElementById("p2").style.background = c2;
+            swap = c1;
+            c1 = c2;
+            c2 = swap;
+        }
+    </script>
+</body>
+</html>
