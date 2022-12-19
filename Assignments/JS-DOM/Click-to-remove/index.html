@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to remove items from a dropdown list</title>
+</head>
+<style>h1{text-align: center; background:thistle;}</style>
+<body>
+    <h1>Click to remove items from a dropdown list</h1>
+    <form>
+        <select id = "colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+        </select>
+        <input type = "button" value = "Select and Remove" onclick = "removeEl()"/>
+    </form>
+    <script>
+        let val = document.getElementById("colorSelect").innerText;
+        let op = document.querySelectorAll("option")[0].innerHTML;
+
+        console.log(val);
+        console.log(op);
+
+        // let index = document.
+        // function removeEl()
+        // {
+        //     for(let i = 0; i < document.querySelectorAll("option").length; i++)
+        //     {
+        //         if(document.querySelectorAll("option")[i])
+        //     }
+        // }
+    </script>
+</body>
+</html>
