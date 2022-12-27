@@ -11,28 +11,29 @@
     <h1>Click to remove items from a dropdown list</h1>
     <form>
         <select id = "colorSelect">
-            <option>Red</option>
-            <option>Green</option>
-            <option>White</option>
-            <option>Black</option>
+            <option value = "red">Red</option>
+            <option value = "green">Green</option>
+            <option value = "white">White</option>
+            <option value = "black">Black</option>
         </select>
         <input type = "button" value = "Select and Remove" onclick = "removeEl()"/>
     </form>
     <script>
-        let val = document.getElementById("colorSelect").innerText;
-        let op = document.querySelectorAll("option")[0].innerHTML;
-
-        console.log(val);
-        console.log(op);
-
-        // let index = document.
-        // function removeEl()
-        // {
-        //     for(let i = 0; i < document.querySelectorAll("option").length; i++)
-        //     {
-        //         if(document.querySelectorAll("option")[i])
-        //     }
-        // }
+        const removeEl = () =>
+        {
+            const val = document.getElementById("colorSelect").value
+            const tag = document.getElementById("colorSelect");
+            for(let i = 0; i < document.getElementsByTagName("option").length; i++)
+            {
+                if(val == document.getElementsByTagName("option")[i].value)
+                {
+                    console.log(document.getElementsByTagName("option")[i].value + " is removed!");
+                    tag.removeChild(document.getElementsByTagName("option")[i]);
+                    break;
+                }
+            }
+            //console.log(val);
+        }
     </script>
 </body>
 </html>
