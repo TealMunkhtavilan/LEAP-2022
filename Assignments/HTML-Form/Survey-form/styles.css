@@ -7,11 +7,12 @@
 
 body
 {
-    background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'),
+    linear-gradient(to right,rgb(202, 77, 77), rgb(38, 98, 146));
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    max-height: 100vh;
+    background-position: center, center;
+    background-blend-mode: overlay;
 }
 
 header
@@ -33,6 +34,7 @@ header
 form
 {
     padding: 10px;
+    margin-bottom: 80px;
 }
 
 .items
@@ -50,6 +52,7 @@ input
 label
 {
     display:block;
+    color: white;
 }
 
 select
@@ -95,4 +98,28 @@ button
 {
     width: 100%;
     height: 30px;
+    color: black;
+}
+
+input:invalid
+{
+    border-color: red;
+}
+
+input:valid
+{
+    border-color: green;
+}
+
+fieldset{
+    color: white;
+}
+
+h1
+{
+    color: white;
+}
+
+p{
+    color: white;
 }
