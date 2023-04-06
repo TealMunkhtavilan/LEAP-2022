@@ -1,0 +1,148 @@
+*
+{
+    margin:0, auto;
+    padding:0;
+    box-sizing: border-box;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(137, 176, 223);
+    width: 1800px;
+    height: 1000px;
+}
+.left-section
+{
+    background-color: white;
+    width: 600px;
+    height: 800px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.right-section
+{
+    background-color: rgb(58, 58, 193);
+    width: 600px;
+    height: 800px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.item-1
+{
+    display: flex;
+}
+.item-2
+{
+    display: flex;
+}
+.item-3
+{
+    display: flex;
+}
+input
+{
+    display: block;
+}
+
+.left-section h1
+{
+    color: rgb(38, 84, 157);
+    margin-left: 40px;
+    padding-top: 20px;
+}
+.right-section h1
+{
+    color: rgb(224, 224, 224);
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+/*input styles*/
+
+.item-1 input
+{
+    width: 230px;
+}
+
+.item-3 input
+{
+    width: 230px;
+}
+input
+{
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+    padding-left: 5px;
+    width: 500px;
+    height: 50px;
+    color:rgb(128, 127, 131);
+    border: none;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+select
+{
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+    padding-left: 5px;
+    width: 500px;
+    height: 50px;
+    color: rgb(128, 127, 131);
+    border: none;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.right-section select
+{
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 30px;
+    padding-left: 5px;
+    width: 500px;
+    height: 50px;
+    color:rgb(224, 224, 224);
+    border: none;
+    border-bottom: 1px solid rgb(128, 127, 131);
+    background: rgb(58, 58, 193);
+}
+
+.right-section input
+{
+    background: rgb(58, 58, 193);
+}
+.right-section input::placeholder
+{
+    color: rgb(224, 224, 224);
+}
+
+.checkbox
+{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.checkbox input
+{
+    margin-top: 5px;
+    width: 20px;
+}
+
+button
+{
+    width: 200px;
+    height: 60px;
+    margin-left: 40px;
+    margin-top: 60px;
+    border-radius: 60px;
+    font-size: 20px;
+}
+a
+{
+
+}
+
+
+
