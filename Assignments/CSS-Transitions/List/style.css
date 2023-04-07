@@ -1,0 +1,52 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    display: flex;
+    width: 600px;
+    height: 800px;
+    background: aqua;
+    margin: 50px auto;
+    flex-direction: column;
+}
+
+.item
+{
+    display:flex;
+    border:none;
+    border-bottom: 1px solid green;
+    border-top: 1px solid green;
+    width: 600px;
+    height: 100px;
+    align-items: center;
+    transition-delay: 0;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+.item:hover
+{
+    background: rgb(163, 110, 10);
+    height: 150px;
+}
+
+label
+{
+    padding-left: 50px;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    transition: 1s 0s all linear;
+}
+
+label:hover
+{
+    font-size: 60px;
+    cursor: pointer;
+}
